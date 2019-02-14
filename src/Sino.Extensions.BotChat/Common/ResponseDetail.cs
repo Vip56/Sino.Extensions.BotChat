@@ -20,7 +20,7 @@ namespace Sino.Extensions.BotChat
         /// 解析的词槽与意图
         /// </summary>
         [JsonProperty("schema")]
-        public List<Schema> Schema { get; set; }
+        public Schema Schema { get; set; }
 
         /// <summary>
         /// 解析结果
@@ -308,7 +308,7 @@ namespace Sino.Extensions.BotChat
         /// 候选项附加信息
         /// </summary>
         [JsonProperty("extra_info")]
-        public string ExtraInfo { get; set; }
+        public ExtraInfo ExtraInfo { get; set; }
     }
 
     /// <summary>
@@ -417,5 +417,17 @@ namespace Sino.Extensions.BotChat
         /// </summary>
         [JsonProperty("pval")]
         public float Pval { get; set; }
+    }
+
+    public class ExtraInfo
+    {
+        [JsonProperty("group_id")]
+        public string GroupId { get; set; }
+
+        [JsonProperty("real_threshold")]
+        public string RealThreshold { get; set; }
+
+        [JsonProperty("threshold")]
+        public double ThresHold { get; set; }
     }
 }
