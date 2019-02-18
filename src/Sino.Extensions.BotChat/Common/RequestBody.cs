@@ -38,7 +38,7 @@ namespace Sino.Extensions.BotChat
         /// 干预信息
         /// </summary>
         [JsonProperty("updates")]
-        public Update Updates { get; set; }
+        public string Updates { get; set; }
 
         /// <summary>
         /// 系统自动发现不置信意图/词槽，默认为1
@@ -49,8 +49,8 @@ namespace Sino.Extensions.BotChat
         /// <summary>
         /// 影响UNIT内部行为的超参数，支持K-V形式的JSON对象
         /// </summary>
-        [JsonProperty("hyper_params")]
-        public object HyperParams { get; set; }
+        [JsonProperty("hyper_params", NullValueHandling = NullValueHandling.Ignore)]
+        public object HyperParams { get; set; } = string.Empty;
 
         /// <summary>
         /// SLU阈值，默认为0.5
@@ -62,24 +62,24 @@ namespace Sino.Extensions.BotChat
         /// 会话编号
         /// </summary>
         [JsonProperty("session_id")]
-        public string SessionId { get; set; }
+        public string SessionId { get; set; } = string.Empty;
 
         /// <summary>
         /// BOT视图数据
         /// </summary>
         [JsonProperty("bot_views")]
-        public object BotViews { get; set; }
+        public object BotViews { get; set; } = string.Empty;
 
         /// <summary>
         /// 对话状态数据
         /// </summary>
         [JsonProperty("dialog_state")]
-        public object DialogState { get; set; }
+        public string DialogState { get; set; } = string.Empty;
 
         /// <summary>
         /// 历史交互序列
         /// </summary>
-        [JsonProperty("interactions")]
+        [JsonProperty("interactions", NullValueHandling = NullValueHandling.Ignore)]
         public Interaction[] interactions { get; set; }
     }
 
