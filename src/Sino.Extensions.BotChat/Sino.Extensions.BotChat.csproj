@@ -6,7 +6,7 @@
     <Company>Sino</Company>
     <Description>.Net Core下的百度机器人聊天库</Description>
     <RepositoryType>Git</RepositoryType>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
     <NetStandardImplicitPackageVersion>2.0.0</NetStandardImplicitPackageVersion>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
   </PropertyGroup>
